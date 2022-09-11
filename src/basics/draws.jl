@@ -147,6 +147,6 @@ end
 function Draw(S::Vector{<:Image})  
     m=size(S)[1]
     for i=1:m
-        Draw(A[i])
+        Draw(S[i])
     end
 end

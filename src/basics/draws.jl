@@ -97,9 +97,9 @@ function Draw(A::Vector{Point3D}, clear = true, separate = false)
     plotsY = []
     plotsZ = []
     for i=1:m
-        append!(plotsX, [[0, A[i].x]])
-        append!(plotsY, [[0, A[i].y]])
-        append!(plotsZ, [[0, A[i].z]])
+        append!(plotsX, [[A[i].x]])
+        append!(plotsY, [[A[i].y]])
+        append!(plotsZ, [[A[i].z]])
     end
     
     if(!separate)

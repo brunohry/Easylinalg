@@ -59,7 +59,7 @@ function Draw(A::Vector{Arrow3D}, clear = true, separate = false)
         return p
     end
     
-    return plot!(plotsX,plotsY, arrow=true, layout = (m, 1), label="")
+    return plot!(plotsX,plotsY,plotsZ, arrow=true, layout = (m, 1), label="")
 
 end
 

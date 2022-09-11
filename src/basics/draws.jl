@@ -145,6 +145,8 @@ function Draw(A::Image)
 end
 
 function Draw(S::Vector{<:Image})  
-    K = toNativeVector(S)
-    display(K)
+    m=size(S)[1]
+    for i=1:m
+        Draw(A[i])
+    end
 end

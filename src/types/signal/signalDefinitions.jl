@@ -38,7 +38,7 @@ begin
     *(y::Real,x::Signal) = Signal(x.X, x.Y * y)
     *(x::Signal,y::Real) = *(y::Real,x::Signal)
     
-    /(y::Real,x::Signal) = Signal(x.X, x.Y / y)
+    /(x::Signal, y::Real) = Signal(x.X, x.Y / y)
 
 
     # adicionando safecheck na expressão [A, B]

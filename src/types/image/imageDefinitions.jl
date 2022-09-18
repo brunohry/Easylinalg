@@ -38,7 +38,7 @@ begin
     *(y::Number,x::Image) = Image(x.I * y)
     *(x::Image,y::Real) = *(y::Number,x::Image)
     
-    /(y::Number,x::Image) = Image(x.I / y)
+    /(x::Image,y::Number) = Image(x.I / y)
 
     
     size(x::Image) = size(x.I)

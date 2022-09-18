@@ -18,7 +18,7 @@ begin
     *(b::Real,a::Point2D) = Point2D(a.x * b, a.y * b)
     *(a::Point2D,b::Real) = *(b::Real,a::Point2D)
     
-    /(b::Real,a::Point2D) = Point2D(a.x / b, a.y / b)
+    /(a::Point2D, b::Real) = Point2D(a.x / b, a.y / b)
 
     
     size(a::Point2D) = size([a.x,a.y])

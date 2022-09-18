@@ -3,6 +3,7 @@
         # test construction function
         # test type of concatenation
         @test typeof([Arrow2D(1,2), Arrow2D(3,4)]) == Vector{Arrow2D}
+        @test typeof(Arrow2D(2,4) / 2) == Arrow2D
     end;
     @testset "Base Ops" begin
         @test Arrow2D(1,2) + Arrow2D(3,4) == Arrow2D(4,6)
@@ -22,6 +23,7 @@
         @test toNumberMatrix( [ Arrow2D(1.0, 2.0), Arrow2D(4.0, 5.0) ] ) == [1.0 4.0; 2.0 5.0]
         @test ([ Arrow2D(1.0, 2.0), Arrow2D(4.0, 5.0) ]) * [ 1.0 0.0; 0.0 1.0] ==  [ Arrow2D(1.0, 2.0), Arrow2D(4.0, 5.0) ]
         @test ([ Arrow2D(1.0, 2.0), Arrow2D(4.0, 5.0) ]) * [ 2.0, 3.0 ] ==  Arrow2D(14.0, 19.0)
+        @test (Arrow2D(2.0, 2.0) + Arrow2D(4.0, 6.0) ) / 2.0 ==  Arrow2D(3.0, 4.0)
         @test ([ Arrow2D(1.0, 2.0), Arrow2D( 4.0, 5.0) ]) * [ 2.0 3.0; 4.0 5.0 ] == [ Arrow2D(18.0, 24.0), Arrow2D( 23.0, 31.0 ) ]
         @test ([ Arrow2D(1.0, 2.0), Arrow2D( 4.0, 5.0) ]) \ (([ Arrow2D(1.0, 2.0), Arrow2D( 4.0, 5.0) ]) * [ 2.0 3.0; 4.0 5.0 ]) == [ 2.0 3.0; 4.0 5.0 ]
         @test ([ Arrow2D(1.0, 2.0), Arrow2D( 4.0, 5.0), Arrow2D(7.0, 8.0) ]) \ (([ Arrow2D(1.0, 2.0), Arrow2D( 4.0, 5.0), Arrow2D( 7.0, 8.0) ]) * [ 2.0 3.0; 4.0 5.0; 6.0 7.0]) ≈ [ 2.0 3.0; 4.0 5.0; 6.0 7.0]

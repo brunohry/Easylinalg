@@ -14,7 +14,7 @@ begin
     *(b::Real,a::Arrow2D) = Arrow2D(a.i * b, a.j * b)
     *(a::Arrow2D,b::Real) = *(b::Real,a::Arrow2D)
     
-    /(a::Arrow2D,b::Real) = Arrow2D(a.i / b, a.j / b)
+    /(a::Arrow2D,b::Real) = *((1/b::Real),a::Arrow2D)
 
     
     size(a::Arrow2D) = size([a.i,a.j])

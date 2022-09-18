@@ -16,7 +16,7 @@ begin
     *(b::Real,a::Arrow3D) = Arrow3D(a.i * b, a.j * b, a.k * b)
     *(a::Arrow3D,b::Real) = *(b::Real,a::Arrow3D)
     
-    /(a::Arrow3D, b::Real) = Arrow3D(a.i / b, a.j / b, a.k / b)
+    /(a::Arrow3D, b::Real) = *((1/b::Real),a::Arrow3D)
 
     
     size(a::Arrow3D) = size([a.i,a.j,a.k])

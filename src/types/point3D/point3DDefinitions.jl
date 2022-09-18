@@ -16,7 +16,7 @@ begin
     *(b::Real,a::Point3D) = Point3D(a.x * b, a.y * b, a.z * b)
     *(a::Point3D,b::Real) = *(b::Real,a::Point3D)
     
-    /(a::Point3D, b::Real) = Point3D(a.x / b, a.y / b, a.z / b)
+    /(a::Point3D, b::Real) = *((1/b::Real),a::Point3D)
 
     
     size(a::Point3D) = size([a.x,a.y,a.z])

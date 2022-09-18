@@ -3,6 +3,7 @@
         # test construction function
         # test type of concatenation
         @test typeof([Point2D(1, 2), Point2D(3, 4)]) == Vector{Point2D}
+        @test typeof(Point2D(2, 4) / 2 ) == Point2D
     end;
     @testset "Base Ops" begin
         @test Point2D(1, 2) + Point2D(3, 4) == Point2D(4, 6)

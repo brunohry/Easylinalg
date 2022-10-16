@@ -116,4 +116,3 @@ function Base.:\(S::Vector{<:types}, W::Vector{<:types})
     J = toNumberMatrix(W)    
     return K\J
 end
-

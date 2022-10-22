@@ -1,31 +1,32 @@
 # EasyLinalg
-Easylinalg é um projeto que tem como objtivo auxiliar no ensino de algebra lienar, proponto um modelo onde atrazer de uma forte tipagem é possivel associar um obejto de estudo a um tipo construnido. Esta abordagem visa auxiliar uma construção de exemplos. 
+EasyLinalg é um projeto cujo objetivo é auxiliar no ensino de álgebra linear, propondo um modelo onde é possível associar um objeto de estudo a um tipo construído na linguagem. Esta abordagem visa auxiliar construções de exemplos. 
 ## Instalação
 
-Ao utiliza o gerenciador de pacotes de julia, utilize o comando abaixo.
+Ao utiliza o gerenciador de pacotes de Julia, utilize o comando abaixo.
+
 Julia> ] add https://github.com/brunohry/Easylinalg
 
-Como segunda opção também é possivel rodar a instalação direto de um código Julia, utilizando as próximas duas linhas de código.
+Como segunda opção também é possível rodar a instalação direto de um código Julia, utilizando as próximas duas linhas de código:
 
 using Pkg
 
 Pkg.add(url="https://github.com/brunohry/Easylinalg")
 
 ## Para desenvolver
-Para desenvolver o parcote, utilize  o processo padrão documentato em: https://docs.julialang.org/en/v1/stdlib/Pkg/
+Para desenvolver o pacote, utilize  o processo padrão documentado em: https://docs.julialang.org/en/v1/stdlib/Pkg/
 
-Este processo padrão consiste em navegar para o diretório da Biblioteca através do seguinte comando:
+Este processo padrão consiste em navegar para o diretório da biblioteca através do seguinte comando:
 
-Julia> cd("EasyLinal")
+Julia> cd("EasyLinalg")
 
-e então ativar o pacote:
+Para então ativar o pacote:
 
 Julia> ] activate .
 
-após isso então é possivel importar a biblioteca utilizando: using EasyLinalg
+Após esses comandos é possível importar a biblioteca utilizando: using EasyLinalg
 
 
-## Para Build
+## Para fazer o Build
 Para realizar o build do projeto, utilize:
 
 Julia> ] build

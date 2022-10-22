@@ -50,23 +50,6 @@ function *( S::Vector{<:types}, w::Matrix{<:numberTypes})
     return K
 end
 
-function *( S::Vector{<:types}, w::Vector{<:numberTypes})
-    element = deepcopy(S[1])
-    type = typeof(element) 
-    K = Vector{type}([element])
-    T = toNumberMatrix(S)
-    T = T * w
-    s = size(T)[2]
-    for i=1:s
-        for j=1:size(T)[1]
-            K[i][j] = T[j,i]
-        end
-        if( i < s)
-            push!(K, deepcopy(element))
-        end
-    end
-    return K
-end
 
 function *( S::types, w::Matrix{<:numberTypes})
     T = toNumberVector(S)'
@@ -135,8 +118,8 @@ function Base.:\(S::Vector{<:types}, W::Vector{<:types})
     return K\J
 end
 
-function Base.:\(S::Vector{<:types}, W::Vector{<:types})
+function Base.:\(S::Vector{<:types}, W::types)
     K = toNumberMatrix(S)
-    J = toNumberMatrix(W)    
+    J = toNumberVector(W)   
     return K\J
 end

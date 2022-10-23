@@ -50,6 +50,7 @@ function *( S::Vector{<:types}, w::Matrix{<:numberTypes})
     return K
 end
 
+
 function *( S::types, w::Matrix{<:numberTypes})
     T = toNumberVector(S)'
     T = T * w
@@ -114,5 +115,11 @@ end
 function Base.:\(S::Vector{<:types}, W::Vector{<:types})
     K = toNumberMatrix(S)
     J = toNumberMatrix(W)    
+    return K\J
+end
+
+function Base.:\(S::Vector{<:types}, W::types)
+    K = toNumberMatrix(S)
+    J = toNumberVector(W)   
     return K\J
 end

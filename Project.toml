@@ -1,7 +1,7 @@
 name = "EasyLinalg"
 uuid = "e78602dc-67f4-4beb-84cc-ec93072baee7"
 authors = ["Bruno Hryniewicz <brunohry@dcc.ufrj.br>", "Fernando França <fernandofranca@dcc.ufrj.br>"]
-version = "0.1.20"
+version = "0.1.21"
 
 [deps]
 Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"

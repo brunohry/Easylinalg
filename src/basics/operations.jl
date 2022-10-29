@@ -123,3 +123,19 @@ function Base.:\(S::Vector{<:types}, W::types)
     J = toNumberVector(W)   
     return K\J
 end
+
+function RunMarkovChain(S::types, A::Matrix{Float64}, n::Integer)
+    typeArray = Vector{typeof(S)}()
+
+    if typeof(S) == Signal
+        for step in 1:n
+            push!(typeArray, SignalBuild( (S.X' * A^step)',  (S.Y' * A^step)') )
+        end
+    else
+        for step in 1:n
+            push!(typeArray, S * A^step )
+        end
+    end
+
+    Draw(typeArray)
+end

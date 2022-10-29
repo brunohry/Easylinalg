@@ -32,7 +32,7 @@ function Draw(A::Vector{Arrow2D}, clear = true, separate = false)
         return p
     end
     
-    return plot!(plotsX,plotsY, arrow=true, layout = (m, 1), label="")
+    return plot(plotsX,plotsY, arrow=true, layout = (m, 1), label="")
 
 end
 
@@ -59,7 +59,7 @@ function Draw(A::Vector{Arrow3D}, clear = true, separate = false)
         return p
     end
     
-    return plot!(plotsX,plotsY,plotsZ, arrow=true, layout = (m, 1), label="")
+    return plot(plotsX,plotsY,plotsZ, arrow=true, layout = (m, 1), label="")
 
 end
 
@@ -83,7 +83,7 @@ function Draw(A::Vector{Point2D}, clear = true, separate = false)
         return p
     end
     
-    return plot!(plotsX,plotsY, seriestype = "scatter" , layout = (m, 1), label="")
+    return plot(plotsX,plotsY, seriestype = "scatter" , layout = (m, 1), label="")
 
 end
 
@@ -110,7 +110,7 @@ function Draw(A::Vector{Point3D}, clear = true, separate = false)
         return p
     end
     
-    return plot!(plotsX,plotsY, seriestype = "scatter", layout = (m, 1), label="")
+    return plot(plotsX,plotsY, seriestype = "scatter", layout = (m, 1), label="")
 
 end
 
@@ -136,7 +136,7 @@ function Draw(A::Vector{Signal}, clear = true, separate = false)
         return p
     end
 
-    return plot!(plotsX,plotsY, layout = (size(plotsY)[1], 1))
+    return plot(plotsX,plotsY, layout = (size(plotsY)[1], 1))
 
 end
 

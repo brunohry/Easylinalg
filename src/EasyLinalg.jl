@@ -19,7 +19,7 @@ module EasyLinalg
     export Image, ToNativeImage
     export Arrow3D
     export Arrow2D
-    export toNumberMatrix, toNumberVector, convex_combination
+    export toNumberMatrix, toNumberVector, convex_combination, RunMarkovChain
 
 
 

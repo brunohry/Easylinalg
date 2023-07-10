@@ -4,13 +4,13 @@ EasyLinalg é um projeto cujo objetivo é auxiliar no ensino de álgebra linear,
 
 Ao utiliza o gerenciador de pacotes de Julia, utilize o comando abaixo.
 
-`Julia> ] add https://github.com/brunohry/Easylinalg`
+`Julia> ] add https://github.com/MachineTeachingEdu/Easylinalg`
 
 Como segunda opção também é possível rodar a instalação direto de um código Julia, utilizando as próximas duas linhas de código:
 
 `using Pkg`
 
-`Pkg.add(url="https://github.com/brunohry/Easylinalg")`
+`Pkg.add(url="https://github.com/MachineTeachingEdu/Easylinalg")`
 
 ## Para desenvolver
 Para desenvolver o pacote, utilize  o processo padrão documentado em: https://docs.julialang.org/en/v1/stdlib/Pkg/

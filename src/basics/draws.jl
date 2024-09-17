@@ -1,10 +1,10 @@
 include(joinpath("..", "types", "zero", "zeroDefinitions.jl"))
-include(joinpath("..", "types", "Signal", "SignalDefinitions.jl"))
-include(joinpath("..", "types", "Point2D", "Point2DDefinitions.jl"))
-include(joinpath("..", "types", "Point3D", "Point3DDefinitions.jl"))
-include(joinpath("..", "types", "Arrow2D", "Arrow2DDefinitions.jl"))
-include(joinpath("..", "types", "Arrow3D", "Arrow3DDefinitions.jl"))
-include(joinpath("..", "types", "Image", "ImageDefinitions.jl"))
+include(joinpath("..", "types", "signal", "signalDefinitions.jl"))
+include(joinpath("..", "types", "point2D", "point2DDefinitions.jl"))
+include(joinpath("..", "types", "point3D", "point3DDefinitions.jl"))
+include(joinpath("..", "types", "arrow2D", "arrow2DDefinitions.jl"))
+include(joinpath("..", "types", "arrow3D", "arrow3DDefinitions.jl"))
+include(joinpath("..", "types", "image", "imageDefinitions.jl"))
 
 types = Union{Signal, Point2D, Point3D, Arrow2D, Arrow3D}
 
